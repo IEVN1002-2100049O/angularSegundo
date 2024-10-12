@@ -1,0 +1,74 @@
+<div class="grid grid-cols-4 gap-4">
+    <div class="col-start-2">
+        <div class="max-w-md mx-auto p-6 bg-gray-100 rounded-md shadow-md">
+            <h2 class="text-xl font-semibold text-center mb-4">Datos Personales</h2>
+            
+            <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+                <!-- Nombre -->
+                <div class="mb-4">
+                    <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" formControlName="nombre"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+        
+                <!-- Apaterno -->
+                <div class="mb-4">
+                    <label for="apaterno" class="block text-sm font-medium text-gray-700">Apaterno</label>
+                    <input type="text" id="apaterno" name="apaterno" formControlName="apaterno"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+        
+                <!-- Amaterno -->
+                <div class="mb-4">
+                    <label for="amaterno" class="block text-sm font-medium text-gray-700">Amaterno</label>
+                    <input type="text" id="amaterno" name="amaterno" formControlName="amaterno"
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+        
+                <h3 class="text-lg font-semibold mb-2">Fecha de nacimiento</h3>
+                <div class="flex space-x-2 mb-4">
+                    <div>
+                        <label for="dia" class="block text-sm font-medium text-gray-700">Día</label>
+                        <input type="number" id="dia" name="dia" formControlName="dia"
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                    <div>
+                        <label for="mes" class="block text-sm font-medium text-gray-700">Mes</label>
+                        <input type="number" id="mes" name="mes" formControlName="mes"
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                    <div>
+                        <label for="anio" class="block text-sm font-medium text-gray-700">Año</label>
+                        <input type="number" id="anio" name="anio"  formControlName="anio"
+                            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                </div>
+        
+                <!-- Sexo -->
+                <h3 class="text-lg font-semibold mb-2">Sexo</h3>
+                <div class="flex space-x-4">
+                    <div class="flex items-center">
+                        <input id="masculino" name="sexo" type="radio" formControlName="sexo" value="masculino"
+                            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                        <label for="masculino" class="ml-2 block text-sm font-medium text-gray-700">Masculino</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input id="femenino" name="sexo" type="radio"  formControlName="sexo" value="femenino"
+                            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                        <label for="femenino" class="ml-2 block text-sm font-medium text-gray-700">Femenino</label>
+                    </div>
+                </div>
+                <button type="submit"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+                    Registrar
+                </button>
+            </form>
+        </div>        
+    </div>
+    <div>
+        <div class="my-2">
+            <h1>{{nombre}}</h1>
+            <h1>Tienes {{edad}} años</h1>
+        </div>
+    </div>
+</div>
