@@ -6,6 +6,10 @@ export const routes: Routes = [
         loadChildren: () => import('./auth/features/auth.routes')
     },
     {
+        path:'form',
+        loadChildren: () => import('./formulario/formularios.routes')
+    },
+    {
         path:'*',
         redirectTo:''
     }
