@@ -7,5 +7,9 @@ export default[
     {
         path:'ejemplo',
         loadComponent:()=> import('./ejemplo1/ejemplo1.component')
+    },
+    {
+        path:'empleados',
+        loadComponent: ()=> import('./empleados/empleados.component')
     }
 ] as Routes
